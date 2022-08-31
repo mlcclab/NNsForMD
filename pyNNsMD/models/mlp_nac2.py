@@ -59,7 +59,7 @@ class NACModel2(ks.Model):
         self.y_atoms = int(atoms)
         self.in_states = int(states)
 
-        out_dim = int(states * (states - 1) / 2)
+        out_dim = int(states) # Here user should define the 'states', so we can skip the training of some nacme instead of including N*(N-1)
         indim = int(atoms)
 
         # Allow for all distances, backward compatible
